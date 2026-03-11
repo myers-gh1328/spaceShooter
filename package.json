@@ -1,0 +1,11 @@
+{
+  "name": "space-shooter-validation-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/unit",
+    "validate:report": "node tests/validate-report.js",
+    "compare:runs": "node tests/compare-runs.js"
+  }
+}

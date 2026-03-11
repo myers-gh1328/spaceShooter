@@ -1,0 +1,47 @@
+{
+  "runId": "sample-full-001",
+  "timestamp": "2026-03-10T19:10:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Sample mixed-state validation report"
+  },
+  "results": [
+    { "scenarioId": "CORE-TITLE-001", "status": "pass", "observed": "Title screen displayed correctly.", "durationSec": 5, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PLAY-002", "status": "fail", "observed": "Projectile firing intermittently delayed.", "durationSec": 20, "attempts": 2, "defectIds": ["DEF-001"] },
+    { "scenarioId": "CORE-LEVEL-003", "status": "pass", "observed": "Level transition correct.", "durationSec": 35, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PAUSE-004", "status": "pass", "observed": "Pause/resume correct.", "durationSec": 8, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-GAMEOVER-005", "status": "blocked", "observed": "Unable to complete due to earlier control defect.", "durationSec": 5, "attempts": 1, "notes": "Blocked by intermittent control issue.", "defectIds": [] },
+    { "scenarioId": "ADV-COMBO-006", "status": "pass", "observed": "Combo behavior correct.", "durationSec": 25, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-POWERUP-007", "status": "pass", "observed": "Power-up behavior correct.", "durationSec": 55, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-SAUCER-008", "status": "pass", "observed": "Saucer behavior correct.", "durationSec": 45, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-PERSIST-009", "status": "pass", "observed": "Leaderboard persisted correctly.", "durationSec": 15, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-VISIBILITY-010", "status": "pass", "observed": "Visibility pause worked correctly.", "durationSec": 8, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [
+    {
+      "id": "DEF-001",
+      "scenarioId": "CORE-PLAY-002",
+      "severity": "medium",
+      "expected": "Projectiles should fire immediately when the fire control is pressed.",
+      "observed": "Projectile firing was delayed on one attempt.",
+      "reproSteps": [
+        "Start the game from title screen.",
+        "Move the ship while repeatedly pressing fire.",
+        "Observe delayed projectile spawn on one attempt."
+      ],
+      "state": "open"
+    }
+  ],
+  "summary": { "total": 10, "pass": 8, "fail": 1, "blocked": 1 },
+  "durationMin": 6,
+  "comparison": {
+    "baselineRunId": "baseline-full-001",
+    "currentRunId": "sample-full-001",
+    "regressions": ["CORE-PLAY-002", "CORE-GAMEOVER-005"],
+    "fixes": [],
+    "unchangedFailures": [],
+    "newCoverage": []
+  }
+}

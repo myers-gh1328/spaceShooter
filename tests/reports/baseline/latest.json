@@ -1,0 +1,25 @@
+{
+  "runId": "baseline-full-001",
+  "timestamp": "2026-03-10T19:00:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Aggregated baseline"
+  },
+  "results": [
+    { "scenarioId": "CORE-TITLE-001", "status": "pass", "observed": "Baseline pass.", "durationSec": 5, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PLAY-002", "status": "pass", "observed": "Baseline pass.", "durationSec": 20, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-LEVEL-003", "status": "pass", "observed": "Baseline pass.", "durationSec": 40, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PAUSE-004", "status": "pass", "observed": "Baseline pass.", "durationSec": 10, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-GAMEOVER-005", "status": "pass", "observed": "Baseline pass.", "durationSec": 45, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-COMBO-006", "status": "pass", "observed": "Baseline pass.", "durationSec": 30, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-POWERUP-007", "status": "pass", "observed": "Baseline pass.", "durationSec": 60, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-SAUCER-008", "status": "pass", "observed": "Baseline pass.", "durationSec": 50, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-PERSIST-009", "status": "pass", "observed": "Baseline pass.", "durationSec": 20, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-VISIBILITY-010", "status": "pass", "observed": "Baseline pass.", "durationSec": 10, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [],
+  "summary": { "total": 10, "pass": 10, "fail": 0, "blocked": 0 },
+  "durationMin": 5
+}

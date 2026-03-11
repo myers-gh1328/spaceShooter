@@ -1,0 +1,31 @@
+{
+  "runId": "run-template",
+  "timestamp": "2026-03-10T00:00:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "<os>",
+    "browser": "<browser>",
+    "notes": "<notes>"
+  },
+  "results": [
+    {
+      "scenarioId": "<scenario-id>",
+      "status": "pass",
+      "observed": "<observed behavior>",
+      "durationSec": 0,
+      "attempts": 1,
+      "defectIds": []
+    }
+  ],
+  "defects": [],
+  "summary": { "total": 1, "pass": 1, "fail": 0, "blocked": 0 },
+  "durationMin": 0,
+  "comparison": {
+    "baselineRunId": "<baseline-run-id>",
+    "currentRunId": "run-template",
+    "regressions": [],
+    "fixes": [],
+    "unchangedFailures": [],
+    "newCoverage": []
+  }
+}
