@@ -1,0 +1,20 @@
+{
+  "runId": "example-core-001",
+  "timestamp": "2026-03-10T18:15:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Example core gameplay run"
+  },
+  "results": [
+    { "scenarioId": "CORE-TITLE-001", "status": "pass", "observed": "Title loaded correctly.", "durationSec": 4, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PLAY-002", "status": "pass", "observed": "Controls and firing worked.", "durationSec": 18, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-LEVEL-003", "status": "pass", "observed": "Level transition occurred normally.", "durationSec": 35, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PAUSE-004", "status": "pass", "observed": "Pause and resume worked without lockup.", "durationSec": 8, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-GAMEOVER-005", "status": "pass", "observed": "Game over screen displayed properly.", "durationSec": 30, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [],
+  "summary": { "total": 5, "pass": 5, "fail": 0, "blocked": 0 },
+  "durationMin": 2
+}

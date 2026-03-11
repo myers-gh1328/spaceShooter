@@ -1,0 +1,20 @@
+{
+  "runId": "baseline-core-001",
+  "timestamp": "2026-03-10T18:00:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Core baseline for core gameplay validation"
+  },
+  "results": [
+    { "scenarioId": "CORE-TITLE-001", "status": "pass", "observed": "Title screen displayed correctly.", "durationSec": 5, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PLAY-002", "status": "pass", "observed": "Gameplay starts and controls respond.", "durationSec": 20, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-LEVEL-003", "status": "pass", "observed": "Level progression occurs after field clear.", "durationSec": 40, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-PAUSE-004", "status": "pass", "observed": "Pause and resume both work correctly.", "durationSec": 10, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "CORE-GAMEOVER-005", "status": "pass", "observed": "Game over is reachable and state is stable.", "durationSec": 45, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [],
+  "summary": { "total": 5, "pass": 5, "fail": 0, "blocked": 0 },
+  "durationMin": 2
+}

@@ -1,0 +1,20 @@
+{
+  "runId": "example-advanced-001",
+  "timestamp": "2026-03-10T18:40:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Example advanced mechanics run"
+  },
+  "results": [
+    { "scenarioId": "ADV-COMBO-006", "status": "pass", "observed": "Combo incremented and reset correctly.", "durationSec": 25, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-POWERUP-007", "status": "pass", "observed": "Power-ups activated, expired, and replaced correctly.", "durationSec": 55, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-SAUCER-008", "status": "pass", "observed": "Saucer interactions were correct.", "durationSec": 45, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-PERSIST-009", "status": "pass", "observed": "Leaderboard data persisted.", "durationSec": 15, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-VISIBILITY-010", "status": "pass", "observed": "Visibility transition paused gameplay safely.", "durationSec": 8, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [],
+  "summary": { "total": 5, "pass": 5, "fail": 0, "blocked": 0 },
+  "durationMin": 3
+}

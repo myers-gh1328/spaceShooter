@@ -1,0 +1,20 @@
+{
+  "runId": "baseline-advanced-001",
+  "timestamp": "2026-03-10T18:30:00.000Z",
+  "buildRef": "002-full-game-testing",
+  "environment": {
+    "os": "Windows",
+    "browser": "Chrome",
+    "notes": "Advanced systems baseline"
+  },
+  "results": [
+    { "scenarioId": "ADV-COMBO-006", "status": "pass", "observed": "Combo and extra life behavior matched expectations.", "durationSec": 30, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-POWERUP-007", "status": "pass", "observed": "Power-up behavior was correct.", "durationSec": 60, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-SAUCER-008", "status": "pass", "observed": "Saucers spawned and scored correctly.", "durationSec": 50, "attempts": 2, "defectIds": [] },
+    { "scenarioId": "ADV-PERSIST-009", "status": "pass", "observed": "Leaderboard persisted after reload.", "durationSec": 20, "attempts": 1, "defectIds": [] },
+    { "scenarioId": "ADV-VISIBILITY-010", "status": "pass", "observed": "Visibility pause behavior worked.", "durationSec": 10, "attempts": 1, "defectIds": [] }
+  ],
+  "defects": [],
+  "summary": { "total": 5, "pass": 5, "fail": 0, "blocked": 0 },
+  "durationMin": 3
+}

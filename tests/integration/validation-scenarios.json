@@ -1,0 +1,104 @@
+{
+  "scenarios": [
+    {
+      "id": "CORE-TITLE-001",
+      "story": "P1",
+      "title": "Title screen is reachable on load",
+      "preconditions": ["Game is served over HTTP", "Browser tab is freshly opened"],
+      "steps": ["Open the game URL", "Observe initial screen"],
+      "expected": "The title screen is displayed with logo and start prompt.",
+      "priority": "high",
+      "tags": ["core", "title", "ui"]
+    },
+    {
+      "id": "CORE-PLAY-002",
+      "story": "P1",
+      "title": "Core gameplay is controllable",
+      "preconditions": ["Title screen is visible"],
+      "steps": ["Press Enter", "Rotate and thrust the ship", "Fire projectiles"],
+      "expected": "Gameplay starts, the ship moves responsively, and projectiles fire from the ship.",
+      "priority": "critical",
+      "tags": ["core", "controls", "combat"]
+    },
+    {
+      "id": "CORE-LEVEL-003",
+      "story": "P1",
+      "title": "Level progression occurs after clearing asteroids",
+      "preconditions": ["Gameplay is active", "Asteroids are present"],
+      "steps": ["Destroy all asteroids in the current level"],
+      "expected": "A new level begins with increased asteroid count and no state corruption.",
+      "priority": "critical",
+      "tags": ["core", "progression"]
+    },
+    {
+      "id": "CORE-PAUSE-004",
+      "story": "P1",
+      "title": "Pause and resume work reliably",
+      "preconditions": ["Gameplay is active"],
+      "steps": ["Press Escape to pause", "Press Escape again to resume"],
+      "expected": "The pause overlay appears and disappears, and gameplay resumes without drift or lockup.",
+      "priority": "critical",
+      "tags": ["core", "pause", "state"]
+    },
+    {
+      "id": "CORE-GAMEOVER-005",
+      "story": "P1",
+      "title": "Lives decrement and game over is reachable",
+      "preconditions": ["Gameplay is active"],
+      "steps": ["Lose lives through collisions until zero remain"],
+      "expected": "Lives decrement correctly and the game-over screen is shown when lives reach zero.",
+      "priority": "high",
+      "tags": ["core", "lives", "game-over"]
+    },
+    {
+      "id": "ADV-COMBO-006",
+      "story": "P2",
+      "title": "Combo and extra life rules work",
+      "preconditions": ["Gameplay is active"],
+      "steps": ["Destroy objects within combo window", "Cross extra-life threshold"],
+      "expected": "Combo increments and resets correctly, and extra lives are awarded at thresholds.",
+      "priority": "high",
+      "tags": ["advanced", "scoring", "combo"]
+    },
+    {
+      "id": "ADV-POWERUP-007",
+      "story": "P2",
+      "title": "Power-ups activate, replace, and expire correctly",
+      "preconditions": ["Eligible asteroid targets are available"],
+      "steps": ["Spawn or encounter each power-up", "Collect and observe effect", "Wait for timeout or replacement"],
+      "expected": "All power-up rules including duration, replacement, stacking, and despawn are correct.",
+      "priority": "high",
+      "tags": ["advanced", "powerup"]
+    },
+    {
+      "id": "ADV-SAUCER-008",
+      "story": "P2",
+      "title": "Saucers spawn and interact correctly",
+      "preconditions": ["Reach level 3 or higher"],
+      "steps": ["Observe saucer spawn", "Allow saucer to fire", "Destroy saucer"],
+      "expected": "Saucers spawn from edges, fire at the player, and award the correct score when destroyed.",
+      "priority": "high",
+      "tags": ["advanced", "saucer"]
+    },
+    {
+      "id": "ADV-PERSIST-009",
+      "story": "P2",
+      "title": "Leaderboard persists across sessions",
+      "preconditions": ["At least one completed game with a score"],
+      "steps": ["Record a score", "Reload the game", "Return to title screen"],
+      "expected": "Saved scores persist and are displayed on the title screen leaderboard.",
+      "priority": "medium",
+      "tags": ["advanced", "persistence", "leaderboard"]
+    },
+    {
+      "id": "ADV-VISIBILITY-010",
+      "story": "P2",
+      "title": "Visibility pause works",
+      "preconditions": ["Gameplay is active"],
+      "steps": ["Switch browser tab or hide the tab", "Return to the tab"],
+      "expected": "The game pauses on visibility loss and can be resumed without state drift.",
+      "priority": "medium",
+      "tags": ["advanced", "visibility", "pause"]
+    }
+  ]
+}
